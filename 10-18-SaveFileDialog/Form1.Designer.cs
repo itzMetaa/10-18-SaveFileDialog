@@ -49,6 +49,7 @@
             this.textBoxBevitel.Name = "textBoxBevitel";
             this.textBoxBevitel.Size = new System.Drawing.Size(100, 20);
             this.textBoxBevitel.TabIndex = 1;
+            this.textBoxBevitel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxBevitel_KeyDown);
             // 
             // btnSave
             // 
@@ -58,6 +59,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Mentés";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnLoad
             // 
@@ -67,6 +69,10 @@
             this.btnLoad.TabIndex = 3;
             this.btnLoad.Text = "Betöltés";
             this.btnLoad.UseVisualStyleBackColor = true;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Szöveges fájl|*.txt";
             // 
             // formMain
             // 
