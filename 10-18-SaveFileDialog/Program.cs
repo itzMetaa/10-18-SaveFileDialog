@@ -16,7 +16,7 @@ namespace _10_18_SaveFileDialog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new formMain());
         }
     }
 }
