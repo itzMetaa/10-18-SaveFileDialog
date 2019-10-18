@@ -45,5 +45,32 @@ namespace _10_18_SaveFileDialog
 
             }
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.FileOk += (senderFile, eFile) =>
+            {
+                try
+                {
+                    string[] sorok = File.ReadAllLines(openFileDialog1.FileName);
+                    listBoxKiir.Items.Clear();
+                    foreach (var item in sorok)
+                    {
+                        listBoxKiir.Items.Add(item);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Hiba, nem sikerült a betöltés");
+                }
+            };
+            openFileDialog1.ShowDialog();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listBoxKiir.Items.Clear();
+        }
     }
 }
